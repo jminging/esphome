@@ -15,7 +15,7 @@ class RemoteTransmitterComponent : public remote_base::RemoteTransmitterBase,
 {
  public:
   #ifdef USE_ESP32
-    RemoteReceiverComponent(InternalGPIOPin *pin, uint8_t mem_block_num = 1)
+    RemoteTransmitterComponent(InternalGPIOPin *pin, uint8_t mem_block_num = 1)
         : RemoteTransmitterBase(pin), remote_base::RemoteRMTChannel(mem_block_num) {}
   #else
     RemoteTransmitterComponent(InternalGPIOPin *pin) : RemoteTransmitterBase(pin) {}
