@@ -3,8 +3,6 @@
 #include "esphome/core/component.h"
 #include "esphome/components/remote_base/remote_base.h"
 
-#include <vector>
-
 namespace esphome {
 namespace remote_transmitter {
 
@@ -25,8 +23,6 @@ class RemoteTransmitterComponent : public remote_base::RemoteTransmitterBase,
   float get_setup_priority() const override { return setup_priority::DATA; }
 
   void set_carrier_duty_percent(uint8_t carrier_duty_percent) { this->carrier_duty_percent_ = carrier_duty_percent; }
-
-  void set_rmt_channel(uint32_t rmt_channel) { this->override_rmt_channel = rmt_channel_t(rmt_channel); }
 
  protected:
   void send_internal(uint32_t send_times, uint32_t send_wait) override;
@@ -49,8 +45,6 @@ class RemoteTransmitterComponent : public remote_base::RemoteTransmitterBase,
   std::vector<rmt_item32_t> rmt_temp_;
   esp_err_t error_code_{ESP_OK};
   bool inverted_{false};
-
-  rmt_channel_t override_rmt_channel;
 #endif
   uint8_t carrier_duty_percent_{50};
 };
