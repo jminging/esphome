@@ -29,10 +29,11 @@ class RemoteTransmitterComponent : public remote_base::RemoteTransmitterBase,
 
   void set_carrier_duty_percent(uint8_t carrier_duty_percent) { this->carrier_duty_percent_ = carrier_duty_percent; }
 
+  void set_rmt_channel(uint32_t rmt_channel) { this->override_rmt_channel = rmt_channel_t(rmt_channel); }
+
  protected:
   void send_internal(uint32_t send_times, uint32_t send_wait) override;
 
-  void set_rmt_channel(uint32_t rmt_channel) { this->override_rmt_channel = rmt_channel_t(rmt_channel); }
 #ifdef USE_ESP8266
   void calculate_on_off_time_(uint32_t carrier_frequency, uint32_t *on_time_period, uint32_t *off_time_period);
 
