@@ -28,6 +28,7 @@ void RemoteTransmitterComponent::dump_config() {
 }
 
 void RemoteTransmitterComponent::configure_rmt_() {
+  this->channel_ = override_rmt_channel;
   rmt_config_t c{};
 
   this->config_rmt(c);
