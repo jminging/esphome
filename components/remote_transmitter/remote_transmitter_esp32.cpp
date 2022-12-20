@@ -71,6 +71,7 @@ void RemoteTransmitterComponent::configure_rmt_() {
     }
     this->initialized_ = true;
   }
+  this->dump_config();
   ESP_LOGCONFIG(TAG, "Setting up Remote Transmitter OK.");
 }
 
