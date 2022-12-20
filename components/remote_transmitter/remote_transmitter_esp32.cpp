@@ -7,7 +7,7 @@
 namespace esphome {
 namespace remote_transmitter {
 
-static const char *const TAG = "remote_transmitter";
+static const char *const TAG = "remote_transmitter.esp32";
 
 void RemoteTransmitterComponent::setup() { this->configure_rmt_(); }
 

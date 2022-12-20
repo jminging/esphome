@@ -32,6 +32,8 @@ async def to_code(config):
         var = cg.new_Pvariable(config[CONF_ID], pin, config[CONF_MEMORY_BLOCKS])
     else:
         var = cg.new_Pvariable(config[CONF_ID], pin)
+
+    await remote_base.build_triggers(config)
     await cg.register_component(var, config)
 
     cg.add(var.set_carrier_duty_percent(config[CONF_CARRIER_DUTY_PERCENT]))
