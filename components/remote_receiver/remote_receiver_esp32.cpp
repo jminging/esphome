@@ -50,6 +50,7 @@ void RemoteReceiverComponent::setup() {
     this->mark_failed();
     return;
   }
+  ESP_LOGCONFIG(TAG, "Setting up Remote Receiver OK.");
 }
 void RemoteReceiverComponent::dump_config() {
   ESP_LOGCONFIG(TAG, "Remote Receiver:");

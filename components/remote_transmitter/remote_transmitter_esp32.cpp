@@ -28,6 +28,7 @@ void RemoteTransmitterComponent::dump_config() {
 }
 
 void RemoteTransmitterComponent::configure_rmt_() {
+  ESP_LOGCONFIG(TAG, "Setting up Remote Transmitter...");
   this->channel_ = override_rmt_channel;
   rmt_config_t c{};
 
