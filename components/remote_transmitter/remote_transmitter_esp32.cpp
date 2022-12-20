@@ -13,6 +13,7 @@ void RemoteTransmitterComponent::setup() { this->configure_rmt_(); }
 
 void RemoteTransmitterComponent::dump_config() {
   ESP_LOGCONFIG(TAG, "Remote Transmitter...");
+  ESP_LOGCONFIG(TAG, "  MAX RMT memory blocks: %d", RMT_CHANNEL_MAX);
   ESP_LOGCONFIG(TAG, "  Channel: %d", this->channel_);
   ESP_LOGCONFIG(TAG, "  RMT memory blocks: %d", this->mem_block_num_);
   ESP_LOGCONFIG(TAG, "  Clock divider: %u", this->clock_divider_);

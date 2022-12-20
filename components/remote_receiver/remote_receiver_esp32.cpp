@@ -62,6 +62,7 @@ void RemoteReceiverComponent::dump_config() {
   }
   ESP_LOGCONFIG(TAG, "  Channel: %d", this->channel_);
   ESP_LOGCONFIG(TAG, "  RMT memory blocks: %d", this->mem_block_num_);
+  ESP_LOGCONFIG(TAG, "  MAX RMT memory blocks: %d", RMT_CHANNEL_MAX);
   ESP_LOGCONFIG(TAG, "  Clock divider: %u", this->clock_divider_);
   ESP_LOGCONFIG(TAG, "  Tolerance: %u%%", this->tolerance_);
   ESP_LOGCONFIG(TAG, "  Filter out pulses shorter than: %u us", this->filter_us_);
