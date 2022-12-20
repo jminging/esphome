@@ -71,6 +71,7 @@ void RemoteTransmitterComponent::configure_rmt_() {
     }
     this->initialized_ = true;
   }
+  ESP_LOGCONFIG(TAG, "Setting up Remote Transmitter OK.");
 }
 
 void RemoteTransmitterComponent::send_internal(uint32_t send_times, uint32_t send_wait) {
